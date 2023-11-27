@@ -1,0 +1,63 @@
+#f1{
+    /* margin-top:10px;
+    margin-bottom: none;
+    background-color:rgb(103, 211, 238); */
+    background-color:pink;
+    position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  /* background-color: red; */
+  /* color: white; */
+  text-align: center;
+}
+p {
+    color:rgb(145, 94, 189);
+    text-align:center;
+}
+#cop {
+    color:rgb(145, 94, 189);
+    text-align: center;
+}
+h5{
+    /* color:red; */
+    margin:auto;
+    text-align: center;
+}
+
+h2{
+    color: rgb(145, 94, 189);
+    margin: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+#btn{
+    margin:auto;
+    display:block;
+}
+#auth{
+    color:rgb(145, 94, 189);
+}
+#price{
+    color:antiquewhite;
+    text-align:center;
+    
+}
+#head1{
+    background-color:rgb(145, 94, 189);
+    margin-bottom: 20px;
+
+}
+#link{
+    color:antiquewhite;
+    background-color:purple;
+    
+    margin:auto;
+    display:block;
+    text-align:center;
+}
+
+#titlepage{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
