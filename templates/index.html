@@ -4,6 +4,260 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Housing Price Prediction</title>
+    <link href="style.css" rel="stylesheet" type="text/css" media="screen, projection"/>
     <!-- Link to the Bootstrap CSS file -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
+
+<body>
+    <header id="head1">
+      <div id="titlepage">
+        <h2>House Price Prediction - Washington, USA</h2>
+      </div>
+    </header>
+    <style>
+      body {
+        background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.oulu.fi%2Fsites%2Fdefault%2Ffiles%2Fstyles%2Ffull_width%2Fpublic%2Fcontent-images%2FMachine5G.jpg%3Fitok%3DpZUU03tW&f=1&nofb=1");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    </style>
+    <div class="container-fluid">
+      <!-- input for machine learning model -->
+      <form action="/" method="POST">
+        <div class="row">
+          <div class="col-md-1"></div>
+          <div class="col-md-10">
+            <div class="row">
+  
+              <br />
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <label class="form-label"></label>
+                      <input name="yr_built" class="form-control" id="yr_built" placeholder="Year Built (between 1900 - 2014)" />
+                    </div>
+                    
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label class="form-label"></label>
+                                <input name="yr_renovated" class="form-control" id="yr_renovated" placeholder="Year Renovated (between 2005 - 2014)" />
+                            </div>
+            
+                            <div class="row">
+                                <div class="col-md-12">
+                                  <div class="row">
+                                    <div class="col-md-4">
+                                      <label class="form-label"></label>
+                                      <input name="sqft_living" class="form-control" id="sqft_living" placeholder="SQFT Living (between 370 - 5940)" />
+                                    </div>
+                                    
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <label class="form-label"></label>
+                                                <input name="sqft_lot" class="form-control" id="sqft_lot" placeholder="SQFT Land (between 600 - 159000)" />
+                                            </div> 
+            </div>
+              <div class="col-md-3">
+                <label class="form-label"></label>
+                <select id="inputState" name="bedrooms" type="text" class="form-select">
+                  <option disable selected value="">
+                     No. of Bedroom(s)
+                
+                </option>
+                <option value="bedrooms_1">
+                    1
+                  </option>
+                  <option value="bedrooms_2">
+                    2
+                  </option>
+                  <option value="bedrooms_3">
+                    3
+                  </option>
+                  <option value="bedrooms_4">
+                    4
+                  </option>
+                  <option value="bedrooms_5">
+                    5
+                  </option>
+                  <option value="bedrooms_6">
+                    6
+                  </option>
+                  <option value="bedrooms_7">
+                    7
+                  </option>
+                  <option value="bedrooms_8">
+                    8
+                  </option>
+                  <option value="bedrooms_9">
+                    9
+                  </option> 
+                
+                </select>
+              </div>
+              <div class="col-md-3">
+                <label class="form-label"></label>
+                <select id="inputState" name="bathrooms" type="text" class="form-select">
+                  <option disable selected value="">
+                    No. of Bathrooms 
+
+                  </option>
+                  <option value="bathroom_0.75">
+                    0.75
+                  </option>
+                  <option value="bathroom_1">
+                    1
+                  </option>
+                  <option value="bathroom_1.25">
+                    1.25
+                  </option>
+                  <option value="bathroom_1.5">
+                    1.5
+                  </option>
+                  <option value="bathroom_1.75">
+                    1.75
+                  </option>
+                </option>
+                <option value="bathroom_2">
+                  2
+                </option>
+                <option value="bathroom_2.25">
+                    2.25
+                  </option>
+                  <option value="bathroom_2.5">
+                    2.5
+                  </option>
+                <option value="bathroom_2.75">
+                    2.75
+                  </option>
+                  <option value="bathroom_3">
+                    3
+                  </option>
+                  <option value="bathroom_3.25">
+                    3.25
+                  </option>
+                  <option value="bathroom_3.5">
+                    3.5
+                  </option>
+                  <option value="bathroom_3.75">
+                    3.75
+                  </option>
+                </option>
+                <option value="bathroom_4">
+                  4
+                </option>
+                <option value="bathroom_4.25">
+                    4.25
+                  </option>
+                  <option value="bathroom_4.5">
+                    4.5
+                  </option>
+                <option value="bathroom_4.75">
+                    4.75
+                  </option>
+                  <option value="bathroom_5">
+                    5
+                  </option>
+                  <option value="bathroom_5.25">
+                    5.25
+                  </option>
+                  <option value="bathroom_5.5">
+                    5.5
+                  </option>
+                  <option value="bathroom_5.75">
+                    5.75
+                  </option>
+                </option>
+
+            </select>
+        </div>
+        <div class="col-md-3">
+          <label class="form-label"></label>
+          <select id="inputState" name="bathrooms" type="text" class="form-select">
+            <option disable selected value="">
+              No. of Floors 
+
+            </option>
+            <option value="floors_1">
+              1
+            </option>
+            <option value="floors_1.5">
+              1.5
+            </option>
+            <option value="floors_2">
+              2
+            </option>
+            <option value="floors_2.5">
+              2.5
+            </option>
+            <option value="floors_3">
+              3
+            </option>
+          </option>
+          <option value="floors_3.5">
+            3.5
+        </option>
+            </select>
+            <br>
+        </div>
+
+                </select>
+              </div>
+            </div>
+            <br>
+            <button id="btn" type="submit" class="btn btn-primary btn-block">
+              Predict
+            </button>
+            <!-- For Result -->
+            <div class="row">
+              <div class="col-md-12">
+                <br>
+                {% if results %}
+                <h3 id="price">Price Is ${{results}}K</h3>
+                {% else %}
+                {% endif %}
+              </div>
+            </div>
+            <!-- Author Details -->
+            <br />
+            <div>
+  
+              <h5 id="auth">Authors Details</h5>
+              <div class="row">
+                <div class="col-md-6">
+                  <p>Shayla Hong </p>
+                </div>
+                <div class="col-md-6">
+                  <p> Amey Kolangade </p>
+                </div>
+              </div>
+              <p> Kelvin Fu </p>
+  
+            </div>
+            <br><br>
+            <div>
+              <a href="https://github.com/shaylahong/Project4_Group7" id="link">View Project on GitHub</a>
+            </div>
+            <br><br><br><br>
+          </div>
+      </form>
+      <br><br>
+      <div class="col-md-1"></div>
+      <footer id="f1">
+        <p id="cop">
+          Copyright © 2023
+        </p>
+        <p id="cop">All rights reserved</p>
+      </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"></script>
+  </body>
+  
+  </html>

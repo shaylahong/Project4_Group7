@@ -26,7 +26,7 @@ h5{
 }
 
 h2{
-    color: rgb(145, 94, 189);
+    color: antiquewhite;
     margin: 10px;
     text-align: center;
     font-weight: bold;
@@ -50,13 +50,17 @@ h2{
 }
 #link{
     color:antiquewhite;
-    background-color:purple;
+    background-color:rgb(145, 94, 189);
     
     margin:auto;
     display:block;
     text-align:center;
 }
+#btn {
+    background-color: rgb(145, 94, 189);
+    color: antiquewhite;
 
+} 
 #titlepage{
     padding-top: 15px;
     padding-bottom: 15px;

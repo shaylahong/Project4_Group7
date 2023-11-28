@@ -36,19 +36,7 @@ def predict():
         13. yr_renovated
         '''
          #syntax-->  var_name=request.form['<name which in present in html form(index.html)>']
-         query_price=request.form['price']
-         query_bedrooms=request.form['bedrooms']
-         query_bathrooms=request.form['bathrooms']
-         query_sqft_living=request.form['sqft_living']
-         query_sqft_lot=request.form['sqft_lot']
-         query_floors=request.form['floors']
-         query_waterfront=request.form['waterfront']
-         query_view=request.form['view']
-         query_condition=request.form['condition']
-         query_sqft_above=request.form['sqft_above']
-         query_sqft_basement=request.form['sqft_basement'] #Categorical Data
-         query_yr_built=request.form['yr_built'] #Categorical Data
-         query_yr_renovated=request.form['yr_renovated'] #Categorical Data
+         query_bedrooms = float(re)
 
          if query_tradetime<query_constructiontime:
              return render_template('index.html')
